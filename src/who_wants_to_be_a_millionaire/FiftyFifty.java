@@ -10,6 +10,7 @@ public class FiftyFifty extends Lifeline {
     public FiftyFifty() 
     {
         super();
+        // Test comment for commit
     }
     
     // Fifty Fifty
