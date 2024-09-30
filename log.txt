@@ -1,0 +1,52 @@
+GAME LOG
+
+QUESTIONS ANSWERED: 0
+MONEY WON: 0
+
+Brace yourself for the ultimate test of wits. Welcome to Millionaire! 
+Here is your first question worth 100 dollars! 
+
+What is the primary ingredient in bread?
+A) Rice
+B) Flour
+C) Sugar
+D) Cheese
+----------------------------------------------
+1. Lifeline: Phone-a-Friend
+2. Lifeline: Ask the Audience
+3. Lifeline: 50-50
+4. Walkaway with $0
+5. Exit
+B
+Is that your final answer? Y/N
+F
+Please input a valid selection.
+
+
+
+
+Here is your first question worth 100 dollars! 
+
+What is the primary ingredient in bread?
+A) Rice
+B) Flour
+C) Sugar
+D) Cheese
+----------------------------------------------
+1. Lifeline: Phone-a-Friend
+2. Lifeline: Ask the Audience
+3. Lifeline: 50-50
+4. Walkaway with $0
+5. Exit
+D
+Is that your final answer? Y/N
+Y
+... ... That's not right, but you still earned  $0.
+
+Correct Answer: B
+
+
+
+
+Thank you for playing you're taking home 
+ $0

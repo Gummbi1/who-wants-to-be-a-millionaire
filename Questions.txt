@@ -1,0 +1,979 @@
+--QUESTION--
+EASY
+What is the largest mammal in the world?
+A) African Elephant
+B) Blue Whale
+C) Giraffe
+D) Your Mom
+B
+
+--QUESTION--
+EASY
+Which country is known as the Land of the Rising Sun?
+A) China
+B) Japan
+C) Thailand
+D) South Korea
+B
+
+--QUESTION--
+EASY
+What is the chemical symbol for gold?
+A) Au
+B) Ag
+C) Fe
+D) O
+A
+
+--QUESTION--
+MEDIUM
+Who painted the Mona Lisa?
+A) Vincent Van Gogh
+B) Pablo Picasso
+C) Leonardo da Vinci
+D) Michelangelo
+C
+
+--QUESTION--
+MEDIUM
+Which planet is closest to the sun?
+A) Venus
+B) Earth
+C) Mercury
+D) Mars
+C
+
+--QUESTION--
+MEDIUM
+What is the main ingredient in sushi?
+A) Rice
+B) Fish
+C) Seaweed
+D) Soy Sauce
+A
+
+--QUESTION--
+HARD
+What year did the Titanic sink in the Atlantic Ocean?
+A) 1912
+B) 1918
+C) 1923
+D) 1905
+A
+
+--QUESTION--
+HARD
+Who is the author of "Harry Potter" series?
+A) J.R.R. Tolkien
+B) J.K. Rowling
+C) Stephen King
+D) George R.R. Martin
+B
+
+--QUESTION--
+HARD
+Which country gifted the Statue of Liberty to the United States?
+A) France
+B) United Kingdom
+C) Canada
+D) Germany
+A
+
+--QUESTION--
+HARD
+What is the smallest country in the world?
+A) Monaco
+B) Nauru
+C) Vatican City
+D) San Marino
+C
+
+--QUESTION--
+EASY
+How many colors are there in a rainbow?
+A) 5
+B) 6
+C) 7
+D) 8
+C
+
+--QUESTION--
+EASY
+What is the name of the longest river in the world?
+A) Nile
+B) Amazon
+C) Yangtze
+D) Mississippi
+B
+
+--QUESTION--
+EASY
+Which animal is known as the King of the Jungle?
+A) Tiger
+B) Lion
+C) Elephant
+D) Bear
+B
+
+--QUESTION--
+MEDIUM
+In which city would you find the Colosseum?
+A) Athens
+B) Rome
+C) Cairo
+D) Istanbul
+B
+
+--QUESTION--
+MEDIUM
+What is the capital city of Spain?
+A) Barcelona
+B) Madrid
+C) Seville
+D) Valencia
+B
+
+--QUESTION--
+MEDIUM
+Which ocean is the largest?
+A) Atlantic
+B) Indian
+C) Pacific
+D) Arctic
+C
+
+--QUESTION--
+HARD
+Who wrote the play "Romeo and Juliet"?
+A) William Shakespeare
+B) Charles Dickens
+C) Jane Austen
+D) Mark Twain
+A
+
+--QUESTION--
+HARD
+What is the currency of Japan?
+A) Yen
+B) Won
+C) Yuan
+D) Baht
+A
+
+--QUESTION--
+HARD
+Which human organ is capable of regenerating tissue?
+A) Heart
+B) Lung
+C) Liver
+D) Kidney
+C
+
+--QUESTION--
+HARD
+What is the name of the largest oceanic trench?
+A) Mariana Trench
+B) Tonga Trench
+C) Philippine Trench
+D) Java Trench
+A
+
+--QUESTION--
+HARD
+Who was the first woman to win a Nobel Prize?
+A) Marie Curie
+B) Mother Teresa
+C) Malala Yousafzai
+D) Elizabeth Blackwell
+A
+
+--QUESTION--
+EASY
+What gas do plants absorb from the atmosphere for photosynthesis?
+A) Oxygen
+B) Carbon Dioxide
+C) Nitrogen
+D) Hydrogen
+B
+
+--QUESTION--
+EASY
+Which animal is the tallest in the world?
+A) Elephant
+B) Giraffe
+C) Bear
+D) Rhino
+B
+
+--QUESTION--
+EASY
+What is the primary ingredient in bread?
+A) Rice
+B) Flour
+C) Sugar
+D) Cheese
+B
+
+--QUESTION--
+MEDIUM
+Who discovered penicillin?
+A) Marie Curie
+B) Alexander Fleming
+C) Louis Pasteur
+D) Isaac Newton
+B
+
+--QUESTION--
+MEDIUM
+Which country hosted the 2016 Summer Olympics?
+A) China
+B) Brazil
+C) Russia
+D) United Kingdom
+B
+
+--QUESTION--
+MEDIUM
+What is the largest desert in the world?
+A) Sahara
+B) Arabian
+C) Gobi
+D) Kalahari
+A
+
+--QUESTION--
+HARD
+What is the capital of Iceland?
+A) Oslo
+B) Reykjavik
+C) Helsinki
+D) Copenhagen
+B
+
+--QUESTION--
+HARD
+Which artist is famous for cutting off his own ear?
+A) Pablo Picasso
+B) Vincent van Gogh
+C) Claude Monet
+D) Leonardo da Vinci
+B
+
+--QUESTION--
+HARD
+In which year did the Berlin Wall fall?
+A) 1987
+B) 1989
+C) 1991
+D) 1993
+B
+
+--QUESTION--
+HARD
+What is the name of the longest river in Africa?
+A) Congo
+B) Nile
+C) Zambezi
+D) Niger
+B
+
+--QUESTION--
+EASY
+How many strings does a standard guitar have?
+A) 4
+B) 5
+C) 6
+D) 7
+C
+
+--QUESTION--
+EASY
+What is the name of the fairy in Peter Pan?
+A) Wendy
+B) Tinker Bell
+C) Ariel
+D) Cinderella
+B
+
+--QUESTION--
+EASY
+Which continent is the largest?
+A) Africa
+B) Asia
+C) Europe
+D) Antarctica
+B
+
+--QUESTION--
+MEDIUM
+Who wrote "Pride and Prejudice"?
+A) Charlotte Brontë
+B) Emily Brontë
+C) Jane Austen
+D) Mary Shelley
+C
+
+--QUESTION--
+MEDIUM
+What is the capital of Canada?
+A) Toronto
+B) Vancouver
+C) Ottawa
+D) Montreal
+C
+
+--QUESTION--
+HARD
+Who was the first person to walk on the Moon?
+A) Buzz Aldrin
+B) Neil Armstrong
+C) Yuri Gagarin
+D) John Glenn
+B
+
+--QUESTION--
+HARD
+What is the largest bone in the human body?
+A) Skull
+B) Femur
+C) Tibia
+D) Spine
+B
+
+--QUESTION--
+HARD
+Which element has the highest melting point?
+A) Iron
+B) Carbon
+C) Tungsten
+D) Gold
+C
+
+--QUESTION--
+HARD
+What is the name of the phobia that involves an abnormal fear of spiders?
+A) Arachnophobia
+B) Acrophobia
+C) Agoraphobia
+D) Claustrophobia
+A
+
+--QUESTION--
+EASY
+What is the main language spoken in Brazil?
+A) Spanish
+B) Portuguese
+C) French
+D) English
+B
+
+--QUESTION--
+EASY
+Which fruit is known to keep the doctor away if eaten daily?
+A) Banana
+B) Apple
+C) Orange
+D) Grape
+B
+
+--QUESTION--
+EASY
+What color do you get when you mix red and white?
+A) Pink
+B) Purple
+C) Orange
+D) Green
+A
+
+--QUESTION--
+MEDIUM
+What is the name of the largest barrier reef?
+A) Belize Barrier Reef
+B) Great Barrier Reef
+C) Red Sea Coral Reef
+D) New Caledonia Barrier Reef
+B
+
+--QUESTION--
+MEDIUM
+Who is the author of "1984"?
+A) Aldous Huxley
+B) George Orwell
+C) Ray Bradbury
+D) Philip K. Dick
+B
+
+--QUESTION--
+MEDIUM
+What is the currency of India?
+A) Rupee
+B) Rupiah
+C) Ringgit
+D) Riyal
+A
+
+--QUESTION--
+HARD
+Which planet has the most moons?
+A) Earth
+B) Jupiter
+C) Saturn
+D) Mars
+C
+
+--QUESTION--
+HARD
+What is the name of the painting of a woman with a mysterious smile?
+A) The Birth of Venus
+B) Girl with a Pearl Earring
+C) Mona Lisa
+D) Starry Night
+C
+
+--QUESTION--
+HARD
+What is the largest internal organ of the human body?
+A) Heart
+B) Brain
+C) Liver
+D) Lungs
+C
+
+--QUESTION--
+HARD
+Who is known as the father of modern physics?
+A) Isaac Newton
+B) Albert Einstein
+C) Galileo Galilei
+D) Nikola Tesla
+B
+
+--QUESTION--
+EASY
+What is the smallest prime number?
+A) 1
+B) 2
+C) 3
+D) 5
+B
+
+--QUESTION--
+MEDIUM
+Which planet is known as the Earth's twin?
+A) Mars
+B) Venus
+C) Jupiter
+D) Saturn
+B
+
+--QUESTION--
+EASY
+What is the boiling point of water at sea level in Celsius?
+A) 50°C
+B) 75°C
+C) 100°C
+D) 125°C
+C
+
+--QUESTION--
+EASY
+What is the largest planet in our solar system?
+A) Earth
+B) Mars
+C) Jupiter
+D) Saturn
+C
+
+--QUESTION--
+EASY
+Which country is famous for the Eiffel Tower?
+A) Italy
+B) Germany
+C) France
+D) Spain
+C
+
+--QUESTION--
+EASY
+What is the main ingredient in guacamole?
+A) Tomato
+B) Avocado
+C) Onion
+D) Pepper
+B
+
+--QUESTION--
+EASY
+What is the capital of Italy?
+A) Venice
+B) Milan
+C) Rome
+D) Florence
+C
+
+--QUESTION--
+EASY
+Which ocean is the smallest?
+A) Atlantic
+B) Indian
+C) Arctic
+D) Pacific
+C
+
+--QUESTION--
+EASY
+What is the chemical symbol for water?
+A) CO2
+B) H2O
+C) O2
+D) NaCl
+B
+
+--QUESTION--
+MEDIUM
+Who was the first President of the United States?
+A) Thomas Jefferson
+B) Abraham Lincoln
+C) George Washington
+D) John Adams
+C
+
+--QUESTION--
+MEDIUM
+What is the hardest natural substance on Earth?
+A) Gold
+B) Iron
+C) Diamond
+D) Platinum
+C
+
+--QUESTION--
+MEDIUM
+What is the capital of Australia?
+A) Sydney
+B) Melbourne
+C) Canberra
+D) Perth
+C
+
+--QUESTION--
+MEDIUM
+What is the largest island in the world?
+A) Greenland
+B) New Guinea
+C) Borneo
+D) Madagascar
+A
+
+--QUESTION--
+MEDIUM
+Which country is known as the Land of the Pharaohs?
+A) Greece
+B) Egypt
+C) Turkey
+D) Iran
+B
+
+--QUESTION--
+MEDIUM
+What is the main ingredient in hummus?
+A) Chickpeas
+B) Lentils
+C) Beans
+D) Peas
+A
+
+--QUESTION--
+MEDIUM
+What is the tallest mountain in the world?
+A) K2
+B) Kangchenjunga
+C) Lhotse
+D) Mount Everest
+D
+
+--QUESTION--
+HARD
+What is the capital of Mongolia?
+A) Ulaanbaatar
+B) Astana
+C) Tashkent
+D) Bishkek
+A
+
+--QUESTION--
+HARD
+Which scientist proposed the theory of relativity?
+A) Isaac Newton
+B) Albert Einstein
+C) Galileo Galilei
+D) Nikola Tesla
+B
+
+--QUESTION--
+HARD
+What is the smallest unit of life?
+A) Atom
+B) Molecule
+C) Cell
+D) Organ
+C
+
+--QUESTION--
+HARD
+Which country has the most natural lakes?
+A) Canada
+B) Russia
+C) Brazil
+D) United States
+A
+
+--QUESTION--
+HARD
+What is the longest bone in the human body?
+A) Femur
+B) Tibia
+C) Humerus
+D) Radius
+A
+
+--QUESTION--
+HARD
+Who is the author of "The Catcher in the Rye"?
+A) J.D. Salinger
+B) F. Scott Fitzgerald
+C) Ernest Hemingway
+D) John Steinbeck
+A
+
+--QUESTION--
+HARD
+What is the capital of South Korea?
+A) Seoul
+B) Busan
+C) Incheon
+D) Daegu
+A
+
+--QUESTION--
+HARD
+Which element has the atomic number 1?
+A) Helium
+B) Hydrogen
+C) Lithium
+D) Beryllium
+B
+
+--QUESTION--
+HARD
+What is the name of the deepest part of the world's oceans?
+A) Mariana Trench
+B) Tonga Trench
+C) Philippine Trench
+D) Java Trench
+A
+
+--QUESTION--
+HARD
+Who was the first woman to fly solo across the Atlantic Ocean?
+A) Amelia Earhart
+B) Bessie Coleman
+C) Harriet Quimby
+D) Jacqueline Cochran
+A
+
+--QUESTION--
+HARD
+What is the most abundant gas in the Earth's atmosphere?
+A) Oxygen
+B) Carbon Dioxide
+C) Nitrogen
+D) Hydrogen
+C
+
+--QUESTION--
+HARD
+Which country is the largest producer of coffee in the world?
+A) Colombia
+B) Vietnam
+C) Brazil
+D) Ethiopia
+C
+
+--QUESTION--
+HARD
+What is the name of the first artificial Earth satellite?
+A) Apollo
+B) Sputnik
+C) Voyager
+D) Hubble
+B
+
+--QUESTION--
+HARD
+Who wrote "The Odyssey"?
+A) Homer
+B) Virgil
+C) Ovid
+D) Sophocles
+A
+
+--QUESTION--
+HARD
+What is the capital of Argentina?
+A) Buenos Aires
+B) Santiago
+C) Lima
+D) Montevideo
+A
+
+--QUESTION--
+HARD
+Which planet is known for its rings?
+A) Jupiter
+B) Saturn
+C) Uranus
+D) Neptune
+B
+
+--QUESTION--
+HARD
+Who developed the theory of evolution by natural selection?
+A) Charles Darwin
+B) Gregor Mendel
+C) Louis Pasteur
+D) Alfred Wallace
+A
+
+--QUESTION--
+HARD
+What is the capital of Portugal?
+A) Lisbon
+B) Porto
+C) Faro
+D) Braga
+A
+
+--QUESTION--
+HARD
+Which country is known as the Land of the Rising Sun?
+A) China
+B) Japan
+C) Thailand
+D) South Korea
+B
+
+--QUESTION--
+HARD
+What is the name of the longest river in South America?
+A) Amazon
+B) Orinoco
+C) Paraná
+D) Magdalena
+A
+
+--QUESTION--
+HARD
+Who is the author of "The Great Gatsby"?
+A) F. Scott Fitzgerald
+B) Ernest Hemingway
+C) John Steinbeck
+D) William Faulkner
+A
+
+--QUESTION--
+HARD
+What is the capital of Norway?
+A) Oslo
+B) Bergen
+C) Trondheim
+D) Stavanger
+A
+
+--QUESTION--
+HARD
+Which element is represented by the symbol 'Fe'?
+A) Fluorine
+B) Francium
+C) Iron
+D) Fermium
+C
+
+--QUESTION--
+HARD
+What is the name of the largest moon of Saturn?
+A) Titan
+B) Ganymede
+C) Callisto
+D) Europa
+A
+
+--QUESTION--
+HARD
+Who was the first President of the United States?
+A) Thomas Jefferson
+B) Abraham Lincoln
+C) George Washington
+D) John Adams
+C
+
+--QUESTION--
+HARD
+What is the hardest natural substance on Earth?
+A) Gold
+B) Iron
+C) Diamond
+D) Platinum
+C
+
+--QUESTION--
+HARD
+Which element is represented by the symbol 'O'?
+A) Oxygen
+B) Osmium
+C) Gold
+D) Silver
+A
+
+--QUESTION--
+HARD
+What is the capital of Australia?
+A) Sydney
+B) Melbourne
+C) Canberra
+D) Perth
+C
+
+--QUESTION--
+HARD
+Who wrote "To Kill a Mockingbird"?
+A) Harper Lee
+B) Mark Twain
+C) F. Scott Fitzgerald
+D) Ernest Hemingway
+A
+--QUESTION--
+HARD
+Which country is known as the Land of the Pharaohs?
+A) Greece
+B) Egypt
+C) Turkey
+D) Iran
+B
+
+--QUESTION--
+HARD
+What is the main ingredient in hummus?
+A) Chickpeas
+B) Lentils
+C) Beans
+D) Peas
+A
+
+--QUESTION--
+HARD
+What is the tallest mountain in the world?
+A) K2
+B) Kangchenjunga
+C) Lhotse
+D) Mount Everest
+D
+
+--QUESTION--
+HARD
+Who painted the ceiling of the Sistine Chapel?
+A) Leonardo da Vinci
+B) Michelangelo
+C) Raphael
+D) Donatello
+B
+
+--QUESTION--
+EASY
+Which keyword is used to define a class in Java?
+A) class
+B) define
+C) create
+D) new
+A
+
+--QUESTION--
+EASY
+What is the default value of a boolean variable in Java?
+A) true
+B) false
+C) 0
+D) null
+B
+
+--QUESTION--
+EASY
+Which method is used to start a thread in Java?
+A) run()
+B) start()
+C) begin()
+D) init()
+B
+
+--QUESTION--
+MEDIUM
+What is the size of an int variable in Java?
+A) 8 bits
+B) 16 bits
+C) 32 bits
+D) 64 bits
+C
+
+--QUESTION--
+MEDIUM
+Which of the following is not a Java keyword?
+A) static
+B) void
+C) main
+D) private
+C
+
+--QUESTION--
+MEDIUM
+What is the output of 10 % 3 in Java?
+A) 0
+B) 1
+C) 2
+D) 3
+B
+
+--QUESTION--
+HARD
+Which of the following is a marker interface in Java?
+A) Serializable
+B) Cloneable
+C) Remote
+D) All of the above
+D
+
+--QUESTION--
+HARD
+What is the purpose of the transient keyword in Java?
+A) To make a variable constant
+B) To prevent serialization of a variable
+C) To create a synchronized block
+D) To define a static variable
+B
+
+--QUESTION--
+HARD
+Which garbage collection algorithm is used by the JVM?
+A) Mark and Sweep
+B) Reference Counting
+C) Copying
+D) All of the above
+D
+
+--QUESTION--
+HARD
+What is the default encoding for a Java source file?
+A) UTF-8
+B) ASCII
+C) ISO-8859-1
+D) UTF-16
+A
