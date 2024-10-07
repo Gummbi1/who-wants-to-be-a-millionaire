@@ -3,9 +3,7 @@ package who_wants_to_be_a_millionaire;
 
 
 public abstract class Lifeline {
-    
-    // Comment in lifeline
-    
+
     
     // Available is whether the lifeline can be used or has been used already
     protected boolean available;
