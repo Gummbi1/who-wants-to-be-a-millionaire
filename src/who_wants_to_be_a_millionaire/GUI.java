@@ -13,8 +13,36 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     /**
      * Creates new form GUI
      */
+    
+    // Record the state of the game, and create handlers for console and file interaction
+        GameState state = new GameState();
+        FileOperations fileOps = new FileOperations();
+        ConsoleIO consoleIO = new ConsoleIO();
+        
+        // Generate a handler for the questions
+        QuestionHandler qList = new QuestionHandler(fileOps.ParseQuestionsFromFile("Questions.txt"));
+        
+        // Create a host to interact with the player
+        Regis regis = fileOps.ParseRegisFromFile("regis.txt");
+        
+        // Create lifelines
+        CallAFriend lifelineCallAFriend = new CallAFriend();
+        AskTheAudience lifelineAskTheAudience = new AskTheAudience();
+        FiftyFifty lifelineFiftyFifty = new FiftyFifty();
+        
+        // Holder for the next question to be asked
+        Question question = new Question();
+        
+        String playerResponse = "";
+    
     public GUI() {
         initComponents();
+        
+        GenerateQuestionPool();
+        
+        ReadIntro();
+        
+        GameLoop();
     }
 
     /**
@@ -31,18 +59,23 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         answerB = new javax.swing.JButton();
         answerC = new javax.swing.JButton();
         answerD = new javax.swing.JButton();
-        questionTextField = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        moneyList = new javax.swing.JTextPane();
         lifePhone = new javax.swing.JButton();
         life5050 = new javax.swing.JButton();
         lifeAsk = new javax.swing.JButton();
         walkAway = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        regisTextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        labelFinalAnswer = new javax.swing.JLabel();
         finalNo = new javax.swing.JButton();
         finalYes = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        questionTextField = new javax.swing.JTextPane();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        regisTextField = new javax.swing.JTextPane();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(150, 0), new java.awt.Dimension(150, 0), new java.awt.Dimension(150, 32767));
+        jLabel2 = new javax.swing.JLabel();
+        restartGame = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -60,44 +93,48 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         setName("GUI"); // NOI18N
         setResizable(false);
 
+        answerA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         answerA.setText("answerA");
         answerA.setActionCommand("jButton1");
-        answerA.setBorder(null);
+        answerA.setEnabled(false);
         answerA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 answerAMouseClicked(evt);
             }
         });
 
+        answerB.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         answerB.setText("answerB");
+        answerB.setEnabled(false);
         answerB.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 answerBMouseClicked(evt);
             }
         });
 
+        answerC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         answerC.setText("answerC");
+        answerC.setEnabled(false);
         answerC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 answerCMouseClicked(evt);
             }
         });
 
+        answerD.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         answerD.setText("answerD");
+        answerD.setEnabled(false);
         answerD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 answerDMouseClicked(evt);
             }
         });
 
-        questionTextField.setEditable(false);
-        questionTextField.setText("questionTextField");
-
-        jTextPane1.setEditable(false);
-        jTextPane1.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        jTextPane1.setText("15     $1,000,000\n14     $500,000\n13     $250,000\n12     $125,000\n11     $64,000\n10     $32,000\n  9     $16,000\n  8     $8,000\n  7     $4,000\n  6     $2,000\n  5     $1,000\n  4     $500\n  3     $300\n  2     $200\n  1     $100\n  0     $0");
-        jTextPane1.setAutoscrolls(false);
-        jScrollPane1.setViewportView(jTextPane1);
+        moneyList.setEditable(false);
+        moneyList.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
+        moneyList.setText("15     $1,000,000\n14     $500,000\n13     $250,000\n12     $125,000\n11     $64,000\n10     $32,000\n  9     $16,000\n  8     $8,000\n  7     $4,000\n  6     $2,000\n  5     $1,000\n  4     $500\n  3     $300\n  2     $200\n  1     $100\n  0     $0");
+        moneyList.setAutoscrolls(false);
+        jScrollPane1.setViewportView(moneyList);
 
         lifePhone.setText("lifePhone");
         lifePhone.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -129,12 +166,10 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
 
         jLabel1.setText("Life Lines");
 
-        regisTextField.setEditable(false);
-        regisTextField.setText("regisTextField ");
-
-        jLabel2.setText("Is that your final answer?");
+        labelFinalAnswer.setText("Is that your final answer?");
 
         finalNo.setText("finalNo");
+        finalNo.setEnabled(false);
         finalNo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 finalNoMouseClicked(evt);
@@ -142,9 +177,30 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         });
 
         finalYes.setText("finalYes");
+        finalYes.setEnabled(false);
         finalYes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 finalYesMouseClicked(evt);
+            }
+        });
+
+        questionTextField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        questionTextField.setText("questionTextField");
+        questionTextField.setName("questionTextField"); // NOI18N
+        jScrollPane2.setViewportView(questionTextField);
+
+        regisTextField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        regisTextField.setText("regisTextField ");
+        regisTextField.setName("regisTextField "); // NOI18N
+        jScrollPane3.setViewportView(regisTextField);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisExcited.png"))); // NOI18N
+        jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 255)));
+
+        restartGame.setText("restartGame");
+        restartGame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restartGameMouseClicked(evt);
             }
         });
 
@@ -153,128 +209,180 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lifePhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(life5050, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lifeAsk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(walkAway, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(regisTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(questionTextField)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(answerA, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(answerC, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(21, 21, 21)
-                                    .addComponent(jLabel2))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(50, 50, 50)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(finalYes)
-                                        .addComponent(finalNo))))
-                            .addGap(22, 22, 22)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(answerB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(answerD, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))))
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lifePhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(life5050, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lifeAsk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(walkAway, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(restartGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(answerA, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(answerC, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(27, 27, 27)
+                                                .addComponent(labelFinalAnswer)))
+                                        .addGap(18, 18, 18))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(finalNo)
+                                            .addComponent(finalYes))
+                                        .addGap(55, 55, 55)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(answerB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(answerD, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(regisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane3))
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(lifePhone, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(life5050, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(lifeAsk, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(150, 150, 150)
-                                        .addComponent(answerA, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(answerA, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(answerB, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(27, 27, 27)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(answerC, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(answerD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(38, 38, 38)
-                                        .addComponent(walkAway, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(questionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(answerB, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelFinalAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(finalYes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(finalYes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(finalNo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lifePhone, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(life5050, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lifeAsk, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(walkAway, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(finalNo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)))))
-                .addContainerGap(53, Short.MAX_VALUE))
+                                .addComponent(restartGame, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void answerAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerAMouseClicked
-        // TODO add your handling code here:
+        if (answerA.isEnabled())
+        {
+            playerResponse = "A";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerA.setEnabled(true);
+        }
     }//GEN-LAST:event_answerAMouseClicked
 
     private void answerBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerBMouseClicked
-        // TODO add your handling code here:
+        if (answerB.isEnabled())
+        {
+            playerResponse = "B";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerB.setEnabled(true);
+        }
     }//GEN-LAST:event_answerBMouseClicked
 
     private void answerCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerCMouseClicked
-        // TODO add your handling code here:
+        if (answerC.isEnabled())
+        {
+            playerResponse = "C";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerC.setEnabled(true);
+        }
     }//GEN-LAST:event_answerCMouseClicked
 
     private void answerDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerDMouseClicked
-        // TODO add your handling code here:
+        if (answerD.isEnabled())
+        {
+            playerResponse = "D";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerD.setEnabled(true);
+        }
     }//GEN-LAST:event_answerDMouseClicked
 
     private void finalYesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalYesMouseClicked
-        // TODO add your handling code here:
+        EnableFinalAnswerButtons(false);
+        CheckPlayerAnswer(playerResponse);
     }//GEN-LAST:event_finalYesMouseClicked
 
     private void finalNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalNoMouseClicked
-        // TODO add your handling code here:
+        EnableFinalAnswerButtons(false);
+        EnableAnswerButtons(true);
+        ReadNo();
     }//GEN-LAST:event_finalNoMouseClicked
 
     private void lifePhoneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lifePhoneMouseClicked
-        // TODO add your handling code here:
+        if (lifePhone.isEnabled())
+        {
+            UseLifelineCallAFriend();
+        }
     }//GEN-LAST:event_lifePhoneMouseClicked
 
     private void life5050MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_life5050MouseClicked
-        // TODO add your handling code here:
+        if (life5050.isEnabled())
+        {
+            UseLifeline5050();
+        }
     }//GEN-LAST:event_life5050MouseClicked
 
     private void lifeAskMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lifeAskMouseClicked
-        // TODO add your handling code here:
+        if (lifeAsk.isEnabled())
+        {
+            UseLifelineAskTheAudience();
+        }
     }//GEN-LAST:event_lifeAskMouseClicked
 
     private void walkAwayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_walkAwayMouseClicked
-        // TODO add your handling code here:
+        WalkAway();
     }//GEN-LAST:event_walkAwayMouseClicked
+
+    private void restartGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restartGameMouseClicked
+        NewGame();
+    }//GEN-LAST:event_restartGameMouseClicked
 
     /**
      * @param args the command line arguments
@@ -306,31 +414,84 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI().setVisible(true);
+                new GUI().setVisible(true);                
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton answerA;
     private javax.swing.JButton answerB;
     private javax.swing.JButton answerC;
     private javax.swing.JButton answerD;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton finalNo;
     private javax.swing.JButton finalYes;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel labelFinalAnswer;
     private javax.swing.JButton life5050;
     private javax.swing.JButton lifeAsk;
     private javax.swing.JButton lifePhone;
-    private javax.swing.JTextField questionTextField;
-    private javax.swing.JTextField regisTextField;
+    private javax.swing.JTextPane moneyList;
+    private javax.swing.JTextPane questionTextField;
+    private javax.swing.JTextPane regisTextField;
+    private javax.swing.JButton restartGame;
     private javax.swing.JButton walkAway;
     // End of variables declaration//GEN-END:variables
 
+    // Resets the entire game
+    public void NewGame()
+    {
+        state = new GameState();
+        playerResponse = "";
+        
+        EnableOptions(true);
+        GenerateQuestionPool();
+        ReadIntro();
+        GameLoop();
+    }
+    
+    // Set enabled for final answer buttons
+    public void EnableFinalAnswerButtons(boolean en)
+    {
+        labelFinalAnswer.setVisible(en);
+        
+        finalYes.setVisible(en);
+        finalNo.setVisible(en);
+        
+        finalYes.setEnabled(en);
+        finalNo.setEnabled(en);
+    }
+    
+    // Set enabled for answer buttons
+    public void EnableAnswerButtons(boolean en)
+    {
+        answerA.setEnabled(en);
+        answerB.setEnabled(en);
+        answerC.setEnabled(en);
+        answerD.setEnabled(en);
+    }
+    
+    // Set enabled for lifeline and walk away buttons
+    public void EnableOptions(boolean en)
+    {
+        lifePhone.setEnabled(en);
+        lifeAsk.setEnabled(en);
+        life5050.setEnabled(en);
+        walkAway.setEnabled(en);
+    }
+    
+    public void SetMoneyListHighlight()
+    {
+        moneyList.setText(state.GetPrizeListAsText());
+    }
+    
     @Override
     // Generate subset of easy, medium and hard questions
     public void GenerateQuestionPool() {
@@ -340,61 +501,115 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     @Override
     // Output an intro from Regis to the chosen output
     public void ReadIntro() {
-        
+        regisTextField.setText(regis.readIntro());
     }
 
     @Override
     // Run main gameplay loop
     public void GameLoop() {
         
+        SetMoneyListHighlight();
+        
+        if (state.isGameOver() == false)
+        {
+            AskQuestion();
+        }
+        else
+        {
+            ReadOutro();
+            
+            // Clear question and answers
+            questionTextField.setText("");
+            answerA.setText("Answer A");
+            answerB.setText("Answer B");
+            answerC.setText("Answer C");
+            answerD.setText("Answer D");
+        
+            // Disable all buttons
+            EnableOptions(false);        
+            EnableAnswerButtons(false);
+            EnableFinalAnswerButtons(false);
+            
+            ExportGameLog();
+        }
     }
 
     @Override
     // Ask the player the next question
     public void AskQuestion() {
+        question = qList.GetNextQuestion(state.getQuestionNum());
+        questionTextField.setText(regis.readQuestion(state.getQuestionNum(), state.getNextWinnings(), question));
         
+        // Write answers to buttons
+        answerA.setText(question.getAnswerA());
+        answerB.setText(question.getAnswerB());
+        answerC.setText(question.getAnswerC());
+        answerD.setText(question.getAnswerD());
+        
+        // Make answer buttons clickable
+        EnableAnswerButtons(true);
+        EnableFinalAnswerButtons(false);
     }
 
     @Override
     // Get a response from the player, and check if it is correct
     public void CheckPlayerAnswer(String input) {
+        if (question.IsCorrect(input))
+        {
+            // Advance to next question if answer is correct
+            state.incrementQuestion();
+            regisTextField.setText(regis.readCorrect(state.getCurrentWinnings(), state.getBankedWinnings()));
+        }
+        else
+        {
+            // End the game if an incorrect answer is given
+            state.setGameOver();
+            regisTextField.setText(regis.readIncorrect(state.getCurrentWinnings(), question));
+        }
         
+        // Loop back and run again
+        GameLoop();
     }
 
     @Override
     // Output a response from Regis if the player chooses to retract their final answer
     public void ReadNo() {
-        
+        regisTextField.setText(regis.readNo());
     }
 
     @Override
     // Use a lifeline for the current question
     public void UseLifelineCallAFriend() {
-        
+        regisTextField.setText(lifelineCallAFriend.UseLifeline(question));
+        lifePhone.setEnabled(false);
     }
 
     @Override
     // Use a lifeline for the current question
     public void UseLifelineAskTheAudience() {
-        
+        regisTextField.setText(lifelineAskTheAudience.UseLifeline(question));
+        lifeAsk.setEnabled(false);
     }
 
     @Override
     // Use a lifeline for the current question
     public void UseLifeline5050() {
-        
+        regisTextField.setText(lifelineFiftyFifty.UseLifeline(question));
+        life5050.setEnabled(false);
     }
 
     @Override
     // End the game by walking away or exiting to menu
     public void WalkAway() {
-        
+        state.walkAway();
+
+        GameLoop();
     }
 
     @Override
     // Output an outro and final winnings from Regis to the chosen output
     public void ReadOutro() {
-        
+        regisTextField.setText(regis.readOutro(state.getCurrentWinnings()));
     }
 
     @Override
