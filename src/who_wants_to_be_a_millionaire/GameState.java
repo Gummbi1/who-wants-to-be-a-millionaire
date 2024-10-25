@@ -8,6 +8,7 @@ public class GameState {
      private int nextWinnings;
      private int bankedWinnings; 
      private int[] prizeList = {0, 100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000};
+     private String[] textPrizeList = {"0", "100", "200", "300", "500", "1,000", "2,000", "4,000", "8,000", "16,000", "32,000", "64,000", "125,000", "250,000", "500,000", "1,000,000"};
      
       //blake
    //refreshes/starts game
@@ -18,6 +19,37 @@ public class GameState {
      getNextWinnings();
      checkBanked();
     
+   }
+   
+   // Export the prize list as a string with markers
+   public String GetPrizeListAsText()
+   {
+       String prizeText = "";
+       
+       for (int i = textPrizeList.length - 1; i >= 0; i--)
+       {
+           if (i < 10)
+           {
+               prizeText += "  ";
+           }
+           prizeText += i;
+           if (i <= questionAns)
+           {
+               prizeText += " | ";
+           }
+           else
+           {
+               prizeText += "   ";
+           }
+           prizeText += " $";
+           prizeText += textPrizeList[i];
+           if (i != 0)
+           {
+               prizeText += "\n";
+           }
+       }
+       
+       return prizeText;
    }
 
    //get what question number player is on

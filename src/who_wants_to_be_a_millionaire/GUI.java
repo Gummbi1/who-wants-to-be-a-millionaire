@@ -60,7 +60,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         answerC = new javax.swing.JButton();
         answerD = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        moneyList = new javax.swing.JTextPane();
         lifePhone = new javax.swing.JButton();
         life5050 = new javax.swing.JButton();
         lifeAsk = new javax.swing.JButton();
@@ -130,11 +130,11 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             }
         });
 
-        jTextPane1.setEditable(false);
-        jTextPane1.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        jTextPane1.setText("15     $1,000,000\n14     $500,000\n13     $250,000\n12     $125,000\n11     $64,000\n10     $32,000\n  9     $16,000\n  8     $8,000\n  7     $4,000\n  6     $2,000\n  5     $1,000\n  4     $500\n  3     $300\n  2     $200\n  1     $100\n  0     $0");
-        jTextPane1.setAutoscrolls(false);
-        jScrollPane1.setViewportView(jTextPane1);
+        moneyList.setEditable(false);
+        moneyList.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
+        moneyList.setText("15     $1,000,000\n14     $500,000\n13     $250,000\n12     $125,000\n11     $64,000\n10     $32,000\n  9     $16,000\n  8     $8,000\n  7     $4,000\n  6     $2,000\n  5     $1,000\n  4     $500\n  3     $300\n  2     $200\n  1     $100\n  0     $0");
+        moneyList.setAutoscrolls(false);
+        jScrollPane1.setViewportView(moneyList);
 
         lifePhone.setText("lifePhone");
         lifePhone.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -198,9 +198,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 255)));
 
         restartGame.setText("restartGame");
-        restartGame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                restartGameActionPerformed(evt);
+        restartGame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restartGameMouseClicked(evt);
             }
         });
 
@@ -305,31 +305,43 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     }// </editor-fold>//GEN-END:initComponents
 
     private void answerAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerAMouseClicked
-        playerResponse = "A";
-        EnableFinalAnswerButtons(true);
-        EnableAnswerButtons(false);
-        answerA.setEnabled(true);
+        if (answerA.isEnabled())
+        {
+            playerResponse = "A";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerA.setEnabled(true);
+        }
     }//GEN-LAST:event_answerAMouseClicked
 
     private void answerBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerBMouseClicked
-        playerResponse = "B";
-        EnableFinalAnswerButtons(true);
-        EnableAnswerButtons(false);
-        answerB.setEnabled(true);
+        if (answerB.isEnabled())
+        {
+            playerResponse = "B";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerB.setEnabled(true);
+        }
     }//GEN-LAST:event_answerBMouseClicked
 
     private void answerCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerCMouseClicked
-        playerResponse = "C";
-        EnableFinalAnswerButtons(true);
-        EnableAnswerButtons(false);
-        answerC.setEnabled(true);
+        if (answerC.isEnabled())
+        {
+            playerResponse = "C";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerC.setEnabled(true);
+        }
     }//GEN-LAST:event_answerCMouseClicked
 
     private void answerDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerDMouseClicked
-        playerResponse = "D";
-        EnableFinalAnswerButtons(true);
-        EnableAnswerButtons(false);
-        answerD.setEnabled(true);
+        if (answerD.isEnabled())
+        {
+            playerResponse = "D";
+            EnableFinalAnswerButtons(true);
+            EnableAnswerButtons(false);
+            answerD.setEnabled(true);
+        }
     }//GEN-LAST:event_answerDMouseClicked
 
     private void finalYesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalYesMouseClicked
@@ -344,24 +356,33 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     }//GEN-LAST:event_finalNoMouseClicked
 
     private void lifePhoneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lifePhoneMouseClicked
-        UseLifelineCallAFriend();
+        if (lifePhone.isEnabled())
+        {
+            UseLifelineCallAFriend();
+        }
     }//GEN-LAST:event_lifePhoneMouseClicked
 
     private void life5050MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_life5050MouseClicked
-        UseLifeline5050();
+        if (life5050.isEnabled())
+        {
+            UseLifeline5050();
+        }
     }//GEN-LAST:event_life5050MouseClicked
 
     private void lifeAskMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lifeAskMouseClicked
-        UseLifelineAskTheAudience();
+        if (lifeAsk.isEnabled())
+        {
+            UseLifelineAskTheAudience();
+        }
     }//GEN-LAST:event_lifeAskMouseClicked
 
     private void walkAwayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_walkAwayMouseClicked
         WalkAway();
     }//GEN-LAST:event_walkAwayMouseClicked
 
-    private void restartGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restartGameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_restartGameActionPerformed
+    private void restartGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restartGameMouseClicked
+        NewGame();
+    }//GEN-LAST:event_restartGameMouseClicked
 
     /**
      * @param args the command line arguments
@@ -413,17 +434,28 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel labelFinalAnswer;
     private javax.swing.JButton life5050;
     private javax.swing.JButton lifeAsk;
     private javax.swing.JButton lifePhone;
+    private javax.swing.JTextPane moneyList;
     private javax.swing.JTextPane questionTextField;
     private javax.swing.JTextPane regisTextField;
     private javax.swing.JButton restartGame;
     private javax.swing.JButton walkAway;
     // End of variables declaration//GEN-END:variables
 
+    // Resets the entire game
+    public void NewGame()
+    {
+        state = new GameState();
+        playerResponse = "";
+        
+        EnableOptions(true);
+        GenerateQuestionPool();
+        ReadIntro();
+        GameLoop();
+    }
     
     // Set enabled for final answer buttons
     public void EnableFinalAnswerButtons(boolean en)
@@ -455,6 +487,11 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         walkAway.setEnabled(en);
     }
     
+    public void SetMoneyListHighlight()
+    {
+        moneyList.setText(state.GetPrizeListAsText());
+    }
+    
     @Override
     // Generate subset of easy, medium and hard questions
     public void GenerateQuestionPool() {
@@ -470,6 +507,8 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     @Override
     // Run main gameplay loop
     public void GameLoop() {
+        
+        SetMoneyListHighlight();
         
         if (state.isGameOver() == false)
         {
