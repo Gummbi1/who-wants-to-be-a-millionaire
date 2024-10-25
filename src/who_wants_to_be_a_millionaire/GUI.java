@@ -8,7 +8,7 @@ package who_wants_to_be_a_millionaire;
  *
  * @author blake
  */
-public class GUI extends javax.swing.JFrame {
+public class GUI extends javax.swing.JFrame implements GameLogic {
 
     /**
      * Creates new form GUI
@@ -63,29 +63,35 @@ public class GUI extends javax.swing.JFrame {
         answerA.setText("answerA");
         answerA.setActionCommand("jButton1");
         answerA.setBorder(null);
-        answerA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                answerAActionPerformed(evt);
+        answerA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                answerAMouseClicked(evt);
             }
         });
 
         answerB.setText("answerB");
+        answerB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                answerBMouseClicked(evt);
+            }
+        });
 
         answerC.setText("answerC");
+        answerC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                answerCMouseClicked(evt);
+            }
+        });
 
         answerD.setText("answerD");
-        answerD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                answerDActionPerformed(evt);
+        answerD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                answerDMouseClicked(evt);
             }
         });
 
+        questionTextField.setEditable(false);
         questionTextField.setText("questionTextField");
-        questionTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                questionTextFieldActionPerformed(evt);
-            }
-        });
 
         jTextPane1.setEditable(false);
         jTextPane1.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
@@ -94,40 +100,51 @@ public class GUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextPane1);
 
         lifePhone.setText("lifePhone");
-        lifePhone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lifePhoneActionPerformed(evt);
+        lifePhone.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lifePhoneMouseClicked(evt);
             }
         });
 
         life5050.setText("life5050");
-        life5050.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                life5050ActionPerformed(evt);
+        life5050.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                life5050MouseClicked(evt);
             }
         });
 
         lifeAsk.setText("lifeAsk");
+        lifeAsk.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lifeAskMouseClicked(evt);
+            }
+        });
 
         walkAway.setText("walkAway");
+        walkAway.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                walkAwayMouseClicked(evt);
+            }
+        });
 
         jLabel1.setText("Life Lines");
 
+        regisTextField.setEditable(false);
         regisTextField.setText("regisTextField ");
 
         jLabel2.setText("Is that your final answer?");
 
         finalNo.setText("finalNo");
-        finalNo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finalNoActionPerformed(evt);
+        finalNo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                finalNoMouseClicked(evt);
             }
         });
 
         finalYes.setText("finalYes");
-        finalYes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finalYesActionPerformed(evt);
+        finalYes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                finalYesMouseClicked(evt);
             }
         });
 
@@ -195,7 +212,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(answerC, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(answerD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
@@ -219,33 +236,45 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void answerDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerDActionPerformed
+    private void answerAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerAMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_answerDActionPerformed
+    }//GEN-LAST:event_answerAMouseClicked
 
-    private void questionTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_questionTextFieldActionPerformed
+    private void answerBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerBMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_questionTextFieldActionPerformed
+    }//GEN-LAST:event_answerBMouseClicked
 
-    private void lifePhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lifePhoneActionPerformed
+    private void answerCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerCMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_lifePhoneActionPerformed
+    }//GEN-LAST:event_answerCMouseClicked
 
-    private void answerAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerAActionPerformed
+    private void answerDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_answerDMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_answerAActionPerformed
+    }//GEN-LAST:event_answerDMouseClicked
 
-    private void finalYesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalYesActionPerformed
+    private void finalYesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalYesMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_finalYesActionPerformed
+    }//GEN-LAST:event_finalYesMouseClicked
 
-    private void finalNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalNoActionPerformed
+    private void finalNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalNoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_finalNoActionPerformed
+    }//GEN-LAST:event_finalNoMouseClicked
 
-    private void life5050ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_life5050ActionPerformed
+    private void lifePhoneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lifePhoneMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_life5050ActionPerformed
+    }//GEN-LAST:event_lifePhoneMouseClicked
+
+    private void life5050MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_life5050MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_life5050MouseClicked
+
+    private void lifeAskMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lifeAskMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lifeAskMouseClicked
+
+    private void walkAwayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_walkAwayMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_walkAwayMouseClicked
 
     /**
      * @param args the command line arguments
@@ -301,4 +330,76 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField regisTextField;
     private javax.swing.JButton walkAway;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    // Generate subset of easy, medium and hard questions
+    public void GenerateQuestionPool() {
+        qList.GenerateCurrentGameSubset(5, 5, 5);   // Easy, Medium, Hard questions
+    }
+
+    @Override
+    // Output an intro from Regis to the chosen output
+    public void ReadIntro() {
+        
+    }
+
+    @Override
+    // Run main gameplay loop
+    public void GameLoop() {
+        
+    }
+
+    @Override
+    // Ask the player the next question
+    public void AskQuestion() {
+        
+    }
+
+    @Override
+    // Get a response from the player, and check if it is correct
+    public void CheckPlayerAnswer(String input) {
+        
+    }
+
+    @Override
+    // Output a response from Regis if the player chooses to retract their final answer
+    public void ReadNo() {
+        
+    }
+
+    @Override
+    // Use a lifeline for the current question
+    public void UseLifelineCallAFriend() {
+        
+    }
+
+    @Override
+    // Use a lifeline for the current question
+    public void UseLifelineAskTheAudience() {
+        
+    }
+
+    @Override
+    // Use a lifeline for the current question
+    public void UseLifeline5050() {
+        
+    }
+
+    @Override
+    // End the game by walking away or exiting to menu
+    public void WalkAway() {
+        
+    }
+
+    @Override
+    // Output an outro and final winnings from Regis to the chosen output
+    public void ReadOutro() {
+        
+    }
+
+    @Override
+    // Export a log of the last game to file
+    public void ExportGameLog() {
+        
+    }
 }

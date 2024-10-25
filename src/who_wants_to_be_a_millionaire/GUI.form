@@ -120,9 +120,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="answerC" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                          <Component id="answerD" alignment="3" min="-2" pref="67" max="-2" attributes="0"/>
+                                          <Component id="answerD" min="-2" pref="67" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -164,34 +164,38 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="answerAActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerAMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="answerB">
       <Properties>
         <Property name="text" type="java.lang.String" value="answerB"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerBMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="answerC">
       <Properties>
         <Property name="text" type="java.lang.String" value="answerC"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerCMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="answerD">
       <Properties>
         <Property name="text" type="java.lang.String" value="answerD"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="answerDActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerDMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="questionTextField">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="text" type="java.lang.String" value="questionTextField"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="questionTextFieldActionPerformed"/>
-      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -217,7 +221,7 @@
         <Property name="text" type="java.lang.String" value="lifePhone"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lifePhoneActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lifePhoneMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="life5050">
@@ -225,18 +229,24 @@
         <Property name="text" type="java.lang.String" value="life5050"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="life5050ActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="life5050MouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="lifeAsk">
       <Properties>
         <Property name="text" type="java.lang.String" value="lifeAsk"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lifeAskMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="walkAway">
       <Properties>
         <Property name="text" type="java.lang.String" value="walkAway"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="walkAwayMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -245,6 +255,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="regisTextField">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="text" type="java.lang.String" value="regisTextField "/>
       </Properties>
     </Component>
@@ -258,7 +269,7 @@
         <Property name="text" type="java.lang.String" value="finalNo"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="finalNoActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="finalNoMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="finalYes">
@@ -266,7 +277,7 @@
         <Property name="text" type="java.lang.String" value="finalYes"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="finalYesActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="finalYesMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>
