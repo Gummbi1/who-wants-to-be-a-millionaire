@@ -58,7 +58,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="regisTextField" alignment="1" min="-2" pref="393" max="-2" attributes="0"/>
                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="questionTextField" max="32767" attributes="0"/>
+                      <Component id="questionTextField" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="answerA" min="-2" pref="193" max="-2" attributes="0"/>
@@ -67,7 +67,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelFinalAnswer" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -137,7 +137,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="answerB" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel2" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="labelFinalAnswer" min="-2" pref="28" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="finalYes" min="-2" pref="41" max="-2" attributes="0"/>
                                   </Group>
@@ -162,6 +162,7 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerAMouseClicked"/>
@@ -170,6 +171,7 @@
     <Component class="javax.swing.JButton" name="answerB">
       <Properties>
         <Property name="text" type="java.lang.String" value="answerB"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerBMouseClicked"/>
@@ -178,6 +180,7 @@
     <Component class="javax.swing.JButton" name="answerC">
       <Properties>
         <Property name="text" type="java.lang.String" value="answerC"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerCMouseClicked"/>
@@ -186,6 +189,7 @@
     <Component class="javax.swing.JButton" name="answerD">
       <Properties>
         <Property name="text" type="java.lang.String" value="answerD"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="answerDMouseClicked"/>
@@ -259,7 +263,7 @@
         <Property name="text" type="java.lang.String" value="regisTextField "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="labelFinalAnswer">
       <Properties>
         <Property name="text" type="java.lang.String" value="Is that your final answer?"/>
       </Properties>
@@ -267,6 +271,7 @@
     <Component class="javax.swing.JButton" name="finalNo">
       <Properties>
         <Property name="text" type="java.lang.String" value="finalNo"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="finalNoMouseClicked"/>
@@ -275,6 +280,7 @@
     <Component class="javax.swing.JButton" name="finalYes">
       <Properties>
         <Property name="text" type="java.lang.String" value="finalYes"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="finalYesMouseClicked"/>

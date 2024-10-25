@@ -29,11 +29,7 @@ public class Regis {
         
         String fullQuestion;
         fullQuestion = flairs[select] + nextWinnings + " dollars! \n\n"
-                + question.getQuestionText()
-                + "\n" + question.getAnswerA()
-                + "\n" + question.getAnswerB()
-                + "\n" + question.getAnswerC()
-                + "\n" + question.getAnswerD();
+                + question.getQuestionText();
 
         return fullQuestion;
     }
