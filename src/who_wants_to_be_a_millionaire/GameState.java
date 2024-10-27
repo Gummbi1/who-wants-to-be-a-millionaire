@@ -78,7 +78,15 @@ public class GameState {
        currentWinnings = prizeList[questionAns];
    }
       public int getNextWinnings(){
-       nextWinnings = prizeList[questionAns+1];
+       if (questionAns == 15)
+          {
+              nextWinnings = prizeList[questionAns];
+          }
+          else
+          {
+              nextWinnings = prizeList[questionAns+1];
+          }
+       
        return nextWinnings;
    } 
    //Gets bankedWinnings
