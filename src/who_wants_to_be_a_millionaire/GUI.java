@@ -69,7 +69,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         finalNo = new javax.swing.JButton();
         finalYes = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(150, 0), new java.awt.Dimension(150, 0), new java.awt.Dimension(150, 32767));
-        jLabel2 = new javax.swing.JLabel();
+        regisImage = new javax.swing.JLabel();
         restartGame = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         questionTextField = new javax.swing.JTextArea();
@@ -225,7 +225,6 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         finalYes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         finalYes.setForeground(new java.awt.Color(255, 255, 255));
         finalYes.setText("Yes");
-        finalYes.setActionCommand("Yes");
         finalYes.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 255)));
         finalYes.setEnabled(false);
         finalYes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -236,9 +235,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         getContentPane().add(finalYes, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 448, 70, 41));
         getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 442, 161, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisRegis.png"))); // NOI18N
-        jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 255)));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 43, 186, 186));
+        regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisRegis.png"))); // NOI18N
+        regisImage.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 255)));
+        getContentPane().add(regisImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 43, 186, 186));
 
         restartGame.setBackground(new java.awt.Color(0, 0, 0));
         restartGame.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -258,6 +257,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         });
         getContentPane().add(restartGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 90, 40));
 
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
         questionTextField.setEditable(false);
         questionTextField.setBackground(new java.awt.Color(0, 0, 0));
         questionTextField.setColumns(18);
@@ -272,6 +274,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 590, 130));
 
+        jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane5.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
         regisTextField.setEditable(false);
         regisTextField.setBackground(new java.awt.Color(0, 0, 0));
         regisTextField.setColumns(20);
@@ -281,6 +286,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         regisTextField.setRows(5);
         regisTextField.setText("regisTextField");
         regisTextField.setWrapStyleWord(true);
+        regisTextField.setAutoscrolls(false);
         regisTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 255)));
         jScrollPane5.setViewportView(regisTextField);
         regisTextField.setWrapStyleWord(true);
@@ -318,6 +324,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             EnableFinalAnswerButtons(true);
             EnableAnswerButtons(false);
             answerA.setEnabled(true);
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisRegis.png")));
         }
     }//GEN-LAST:event_answerAMouseClicked
 
@@ -328,6 +335,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             EnableFinalAnswerButtons(true);
             EnableAnswerButtons(false);
             answerB.setEnabled(true);
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisRegis.png")));
         }
     }//GEN-LAST:event_answerBMouseClicked
 
@@ -338,6 +346,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             EnableFinalAnswerButtons(true);
             EnableAnswerButtons(false);
             answerC.setEnabled(true);
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisRegis.png")));
         }
     }//GEN-LAST:event_answerCMouseClicked
 
@@ -348,6 +357,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             EnableFinalAnswerButtons(true);
             EnableAnswerButtons(false);
             answerD.setEnabled(true);
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisRegis.png")));
         }
     }//GEN-LAST:event_answerDMouseClicked
 
@@ -366,6 +376,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         if (lifePhone.isEnabled())
         {
             UseLifelineCallAFriend();
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisPAF.png")));
         }
     }//GEN-LAST:event_lifePhoneMouseClicked
 
@@ -380,11 +391,13 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         if (lifeAsk.isEnabled())
         {
             UseLifelineAskTheAudience();
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisATA.png")));
         }
     }//GEN-LAST:event_lifeAskMouseClicked
 
     private void walkAwayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_walkAwayMouseClicked
         WalkAway();
+        regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisLose.png")));
     }//GEN-LAST:event_walkAwayMouseClicked
 
     private void restartGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restartGameMouseClicked
@@ -448,7 +461,6 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     private javax.swing.JButton finalNo;
     private javax.swing.JButton finalYes;
     private javax.swing.JDialog jDialog1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -459,6 +471,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     private javax.swing.JButton lifePhone;
     private javax.swing.JTextArea moneyList;
     private javax.swing.JTextArea questionTextField;
+    private javax.swing.JLabel regisImage;
     private javax.swing.JTextArea regisTextField;
     private javax.swing.JButton restartGame;
     private javax.swing.JButton walkAway;
@@ -537,6 +550,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     // Output an intro from Regis to the chosen output
     public void ReadIntro() {
         regisTextField.setText(regis.readIntro(state.getQuestionNum(), state.getNextWinnings()));
+        regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisStart.png")));
+        
+        
     }
 
     @Override
@@ -552,7 +568,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         else
         {
             ReadOutro();
-            
+            if (state.getCurrentWinnings()==1000000){
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisWin.png")));
+            }
             // Clear question and answers
             questionTextField.setText("");
             answerA.setText("Answer A");
@@ -595,12 +613,14 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             // Advance to next question if answer is correct
             state.incrementQuestion();
             regisTextField.setText(regis.readCorrect(state.getCurrentWinnings(), state.getBankedWinnings(),state.getQuestionNum(),state.getNextWinnings()));
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisExcited.png")));
         }
         else
         {
             // End the game if an incorrect answer is given
             state.setGameOver();
             regisTextField.setText(regis.readIncorrect(state.getCurrentWinnings(), question));
+            regisImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/who_wants_to_be_a_millionaire/Images/regisLose.png")));
         }
         
         // Loop back and run again
