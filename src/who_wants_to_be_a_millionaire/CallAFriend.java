@@ -23,7 +23,7 @@ public class CallAFriend extends Lifeline {
         Random rand = new Random();
 
         // 80% chance to respond correctly
-        if (rand.nextInt(100) >= 80)
+        if (rand.nextInt(100) <= 80)
         {
             response += question.getCorrectAnswer();
         }
