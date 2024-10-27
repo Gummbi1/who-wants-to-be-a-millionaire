@@ -1,281 +1,281 @@
 --Intro--
-Your quest for a million begins now. Ready to rise to the challenge? 
+Your quest for a million begins now. Ready to rise to the challenge?
 
 --Intro--
-Dare to dream big? Let's find out if you can become a millionaire! 
+Dare to dream big? Let's find out if you can become a millionaire!
 
 --Intro--
-Eyes on the prize, let's play Millionaire! Are you the next winner? 
+Eyes on the prize, let's play Millionaire! Are you the next winner?
 
 --Intro--
-Brace yourself for the ultimate test of wits. Welcome to Millionaire! 
+Brace yourself for the ultimate test of wits. Welcome to Millionaire!
 
 --Intro--
-The hot seat awaits you. Can you handle the heat of Millionaire? 
+The hot seat awaits you. Can you handle the heat of Millionaire?
 
 --Intro--
-Millions are just questions away. Think you have what it takes? 
+Millions are just questions away. Think you have what it takes?
 
 --Intro--
-Join us on Millionaire, where trivia meets fortune. Ready to play? 
+Join us on Millionaire, where trivia meets fortune. Ready to play?
 
 --Intro--
-It's Millionaire time! Grab your wits, and let's get started! 
+It's Millionaire time! Grab your wits, and let's get started!
 
 --Intro--
-Welcome to the arena of intellect. Will you conquer Millionaire? 
+Welcome to the arena of intellect. Will you conquer Millionaire?
 
 --Intro--
-The stage is set, the lights are bright. Millionaire glory awaits! 
+The stage is set, the lights are bright. Millionaire glory awaits!
 
 --Flair--
-Here is your first question worth 
+Here is your first question worth
 
 --Flair--
-Time for the next question for 
+Time for the next question for
 
 --Flair--
-Alright moving on for 
+Alright moving on for
 
 --Flair--
-The next question is one for 
+The next question is one for
 
 --Flair--
-Let's see if you can nail this one for 
+Let's see if you can nail this one for
 
 --Flair--
-Are you ready to take on the next challenge for 
+Are you ready to take on the next challenge for
 
 --Flair--
-The next question is a crucial step for 
+The next question is a crucial step for
 
 --Flair--
-This question could be a game-changer for 
+This question could be a game-changer for
 
 --Flair--
-The next question is worth a significant 
+The next question is worth a significant
 
 --Flair--
-Let's see if you can conquer this one for 
+Let's see if you can conquer this one for
 
 --Flair--
-The next question will net you 
+The next question will net you
 
 --Flair--
-The stakes are high, this question is for 
+The stakes are high, this question is for
 
 --Flair--
-The next question is a big opportunity for 
+The next question is a big opportunity for
 
 --Flair--
-Let's move forward with the next question for 
+Let's move forward with the next question for
 
 --Flair--
-The next question could be your ticket to 
+The next question could be your ticket to
 
 --Flair--
-Ready for the next challenge? It's worth 
+Ready for the next challenge? It's worth
 
 --Flair--
-The next question is a big one for 
+The next question is a big one for
 
 --Flair--
-Can you handle the pressure? This one's for 
+Can you handle the pressure? This one's for
 
 --Flair--
-The next step to victory is worth 
+The next step to victory is worth
 
 --Flair--
-Here comes a crucial question for 
+Here comes a crucial question for
 
 --Flair--
-The stakes are higher now, this question is for 
+The stakes are higher now, this question is for
 
 --Flair--
-Get set for the next question, it's worth 
+Get set for the next question, it's worth
 
 --Flair--
-The next question could win you 
+The next question could win you
 
 --Flair--
-Let's move forward for 
+Let's move forward for
 
 --Flair--
-The next question is a game-changer for 
+The next question is a game-changer for
 
 --Flair--
-This question could take you closer to 
+This question could take you closer to
 
 --Flair--
-The next question is worth 
+The next question is worth
 
 --Flair--
-Let's see if you can answer this one for 
+Let's see if you can answer this one for
 
 --Flair--
-The next question is a tough one for 
+The next question is a tough one for
 
 --Flair--
-Are you ready to tackle the next question for 
+Are you ready to tackle the next question for
 
 --Flair--
-The next question is worth a lot, 
+The next question is worth a lot,
 
 --Flair--
-Let's dive into the next question for 
+Let's dive into the next question for
 
 --Flair--
-Let's see if you can nail this one for 
+Let's see if you can nail this one for
 
 --Flair--
-Ready to take on the next challenge for 
+Ready to take on the next challenge for
 
 --Flair--
-The next question is a crucial step for 
+The next question is a crucial step for
 
 --Flair--
-This question could be a game-changer for 
+This question could be a game-changer for
 
 --Flair--
-Let's see if you can conquer this one for 
+Let's see if you can conquer this one for
 
 --Correct--
-... ... You Are correct! You won 
+You Are correct! You won
 
 --Correct--
-... ... One step closer with 
+One step closer with
 
 --Correct--
-... ... Well done you've now got 
+Well done you've now got
 
 --Correct--
-... ... Congratulations! You're up to 
-
---Correct-- 
-... ... Yes you got it for 
+Congratulations! You're up to
 
 --Correct--
-... ... Holy smokes! Here's 
+Yes you got it for
 
 --Correct--
-... ... Can't stop you! Here's 
+Holy smokes! Here's
 
 --Correct--
-... ... Fantastic! You've earned 
+Can't stop you! Here's
 
 --Correct--
-... ... Brilliant! Now you have 
+Fantastic! You've earned
 
 --Correct--
-... ... Incredible! You've just won 
+Brilliant! Now you have
 
 --Correct--
-... ... Superb! Your total is now 
+Incredible! You've just won
 
 --Correct--
-... ... Amazing! You've secured 
+Superb! Your total is now
 
 --Correct--
-... ... Outstanding! You've added 
+Amazing! You've secured
 
 --Correct--
-... ... Excellent! Your new total is 
+Outstanding! You've added
 
 --Correct--
-... ... Great job! You've reached 
+Excellent! Your new total is
 
 --Correct--
-... ... Impressive! You've now got 
+Great job! You've reached
 
 --Correct--
-... ... Magnificent! Your winnings are now 
+Impressive! You've now got
 
 --Correct--
-... ... Stellar! You've just earned 
+Magnificent! Your winnings are now
 
 --Correct--
-... ... Terrific! You've won 
+Stellar! You've just earned
 
 --Correct--
-... ... Unbelievable! You've got 
+Terrific! You've won
 
 --Correct--
-... ... Wonderful! Your total is now 
+Unbelievable! You've got
 
 --Correct--
-... ... You're unstoppable! You've won 
+Wonderful! Your total is now
 
 --Correct--
-... ... You're on fire! You've earned 
+You're unstoppable! You've won
 
 --Correct--
-... ... You're doing great! You've got 
+You're on fire! You've earned
 
 --Correct--
-... ... You're amazing! You've won 
+You're doing great! You've got
 
 --Correct--
-... ... You're incredible! You've earned 
+You're amazing! You've won
 
 --Correct--
-... ... You're fantastic! You've got 
+You're incredible! You've earned
+
+--Correct--
+You're fantastic! You've got
 
 --Incorrect--
-... ... I'm so sorry, but you still got 
-
---Incorrect-- 
-... ...Unfortunately that's incorrect, still you won 
+I'm so sorry, but you still got
 
 --Incorrect--
-... ... Great effort, but incorrect, here's 
+Unfortunately that's incorrect, still you won
 
 --Incorrect--
-... ... Not quite, but you still have 
+Great effort, but incorrect, here's
 
 --Incorrect--
-... ... That's not right, but you still earned 
+Not quite, but you still have
 
 --Incorrect--
-... ... Sadly, that's incorrect, but you walk away with 
+That's not right, but you still earned
 
 --Incorrect--
-... ... Incorrect, but you still take home 
+Sadly, that's incorrect, but you walk away with
 
 --Incorrect--
-... ... Sorry, that's wrong, but you still get 
+Incorrect, but you still take home
 
 --Incorrect--
-... ... That's not the answer, but you still win 
+Sorry, that's wrong, but you still get
 
 --Incorrect--
-... ... Unfortunately, no, but you still have 
+That's not the answer, but you still win
 
 --Incorrect--
-... ... That's incorrect, but you still leave with 
+Unfortunately, no, but you still have
 
 --Incorrect--
-... ... No luck this time, but you still earned 
+That's incorrect, but you still leave with
 
 --Incorrect--
-... ... That's not it, but you still walk away with 
+No luck this time, but you still earned
+
+--Incorrect--
+That's not it, but you still walk away with
 
 --No--
-Alright, take your time 
+Alright, take your time
 
 --No--
-No problem, here's your question again 
+No problem, here's your question again
 
 --No--
-Big decision don't rush 
+Big decision don't rush
 
 --No--
-Still not sure? 
+Still not sure?
 
 --No--
-Don't forget about your lifelines. 
+Don't forget about your lifelines.
 
 --No--
 Might be time to walkaway.
 
 --Outro--
-Thank you for playing you're taking home 
+Thank you for playing you're taking home

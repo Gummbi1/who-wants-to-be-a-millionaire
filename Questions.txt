@@ -977,3 +977,723 @@ B) ASCII
 C) ISO-8859-1
 D) UTF-16
 A
+
+--QUESTION--
+EASY
+What is the fastest land animal in the world?
+A) Lion
+B) Cheetah
+C) Horse
+D) Falcon
+B
+
+--QUESTION--
+EASY
+What is the main component of the sun?
+A) Carbon
+B) Helium
+C) Oxygen
+D) Hydrogen
+D
+
+--QUESTION--
+EASY
+How many planets are in our solar system?
+A) 7
+B) 8
+C) 9
+D) 10
+B
+
+--QUESTION--
+EASY
+Which fruit has seeds on the outside?
+A) Apple
+B) Orange
+C) Strawberry
+D) Blueberry
+C
+
+--QUESTION--
+MEDIUM
+Who developed the theory of general relativity?
+A) Nikola Tesla
+B) Albert Einstein
+C) Stephen Hawking
+D) Niels Bohr
+B
+
+--QUESTION--
+MEDIUM
+Which country invented pizza?
+A) France
+B) China
+C) Italy
+D) Greece
+C
+
+--QUESTION--
+MEDIUM
+In which year did the first manned moon landing occur?
+A) 1965
+B) 1969
+C) 1972
+D) 1975
+B
+
+--QUESTION--
+MEDIUM
+What type of animal is a Komodo dragon?
+A) Mammal
+B) Bird
+C) Fish
+D) Reptile
+D
+
+--QUESTION--
+HARD
+What is the capital of New Zealand?
+A) Auckland
+B) Christchurch
+C) Wellington
+D) Dunedin
+C
+
+--QUESTION--
+HARD
+Which city hosted the first modern Olympic Games in 1896?
+A) London
+B) Paris
+C) Athens
+D) Rome
+C
+
+--QUESTION--
+HARD
+Who is known as the father of modern chemistry?
+A) Antoine Lavoisier
+B) Dmitri Mendeleev
+C) John Dalton
+D) Robert Boyle
+A
+
+--QUESTION--
+HARD
+Which element has the atomic number 6?
+A) Helium
+B) Carbon
+C) Oxygen
+D) Nitrogen
+B
+
+--QUESTION--
+HARD
+What is the hardest bone in the human body?
+A) Skull
+B) Femur
+C) Tibia
+D) Humerus
+B
+
+--QUESTION--
+EASY
+Which planet is known as the Red Planet?
+A) Venus
+B) Mars
+C) Jupiter
+D) Saturn
+B
+
+--QUESTION--
+EASY
+What shape is the Milky Way galaxy?
+A) Spiral
+B) Elliptical
+C) Irregular
+D) Circular
+A
+
+--QUESTION--
+EASY
+What is the largest type of bear?
+A) Grizzly Bear
+B) Black Bear
+C) Polar Bear
+D) Panda Bear
+C
+
+--QUESTION--
+MEDIUM
+Which language has the most native speakers?
+A) English
+B) Spanish
+C) Mandarin
+D) Hindi
+C
+
+--QUESTION--
+MEDIUM
+Which organ is primarily responsible for filtering blood in the human body?
+A) Heart
+B) Liver
+C) Kidneys
+D) Lungs
+C
+
+--QUESTION--
+MEDIUM
+Which continent has the most countries?
+A) Africa
+B) Asia
+C) Europe
+D) South America
+A
+
+--QUESTION--
+HARD
+In what year did World War II end?
+A) 1944
+B) 1945
+C) 1946
+D) 1947
+B
+
+--QUESTION--
+HARD
+What is the largest planet in the Milky Way?
+A) Earth
+B) Mars
+C) Jupiter
+D) Saturn
+C
+
+--QUESTION--
+HARD
+Which scientist is known for developing the laws of motion?
+A) Galileo Galilei
+B) Albert Einstein
+C) Isaac Newton
+D) Michael Faraday
+C
+
+--QUESTION--
+HARD
+Which Shakespeare play features the characters Rosencrantz and Guildenstern?
+A) Macbeth
+B) Hamlet
+C) Othello
+D) King Lear
+B
+
+--QUESTION--
+HARD
+What is the smallest bone in the human body?
+A) Femur
+B) Stapes
+C) Tibia
+D) Radius
+B
+
+--QUESTION--
+HARD
+What is the capital city of Finland?
+A) Helsinki
+B) Stockholm
+C) Oslo
+D) Tallinn
+A
+
+--QUESTION--
+HARD
+Which ocean is the Bermuda Triangle located in?
+A) Indian
+B) Atlantic
+C) Pacific
+D) Arctic
+B
+
+--QUESTION--
+EASY
+Which animal is known for its black and white stripes?
+A) Tiger
+B) Zebra
+C) Panda
+D) Orca
+B
+
+--QUESTION--
+EASY
+What is the hottest planet in the solar system?
+A) Mercury
+B) Venus
+C) Earth
+D) Mars
+B
+
+--QUESTION--
+MEDIUM
+What is the primary language spoken in Switzerland?
+A) German
+B) English
+C) Dutch
+D) Russian
+A
+
+--QUESTION--
+MEDIUM
+What type of energy does a moving object have?
+A) Potential
+B) Thermal
+C) Kinetic
+D) Chemical
+C
+
+--QUESTION--
+HARD
+Who is the author of "Frankenstein"?
+A) Jane Austen
+B) Mary Shelley
+C) Emily Brontë
+D) Charlotte Brontë
+B
+
+--QUESTION--
+HARD
+What is the term for an animal that only eats plants?
+A) Carnivore
+B) Herbivore
+C) Omnivore
+D) Insectivore
+B
+
+--QUESTION--
+EASY
+Which animal is known for having a long neck?
+A) Giraffe
+B) Elephant
+C) Horse
+D) Camel
+A
+
+--QUESTION--
+EASY
+What is the primary color of the sky on a clear day?
+A) Red
+B) Yellow
+C) Blue
+D) Green
+C
+
+--QUESTION--
+EASY
+Which of these animals can fly?
+A) Elephant
+B) Dolphin
+C) Eagle
+D) Lion
+C
+
+--QUESTION--
+EASY
+What is the main ingredient in French fries?
+A) Tomatoes
+B) Potatoes
+C) Cheese
+D) Bread
+B
+
+--QUESTION--
+EASY
+What type of animal is a frog?
+A) Mammal
+B) Reptile
+C) Amphibian
+D) Fish
+C
+
+--QUESTION--
+EASY
+Which planet has a day longer than its year?
+A) Jupiter
+B) Mercury
+C) Venus
+D) Mars
+C
+
+--QUESTION--
+EASY
+Which metal is liquid at room temperature?
+A) Iron
+B) Mercury
+C) Gold
+D) Copper
+B
+
+--QUESTION--
+EASY
+How many hours are there in a day?
+A) 10
+B) 12
+C) 24
+D) 36
+C
+
+--QUESTION--
+EASY
+Which vegetable is known for making people cry when cut?
+A) Tomato
+B) Onion
+C) Carrot
+D) Lettuce
+B
+
+--QUESTION--
+EASY
+Which of these animals is known for changing colors?
+A) Chameleon
+B) Lion
+C) Panda
+D) Eagle
+A
+
+--QUESTION--
+MEDIUM
+Which country is home to the Eiffel Tower?
+A) Germany
+B) France
+C) Spain
+D) Italy
+B
+
+--QUESTION--
+MEDIUM
+What is the capital city of Greece?
+A) Athens
+B) Rome
+C) Istanbul
+D) Cairo
+A
+
+--QUESTION--
+MEDIUM
+Who developed the polio vaccine?
+A) Louis Pasteur
+B) Jonas Salk
+C) Albert Einstein
+D) Marie Curie
+B
+
+--QUESTION--
+MEDIUM
+In which ocean is the island of Madagascar located?
+A) Atlantic
+B) Indian
+C) Pacific
+D) Arctic
+B
+
+--QUESTION--
+MEDIUM
+Who wrote "The Adventures of Sherlock Holmes"?
+A) Mark Twain
+B) Arthur Conan Doyle
+C) Charles Dickens
+D) H.G. Wells
+B
+
+--QUESTION--
+MEDIUM
+What is the smallest continent by land area?
+A) Europe
+B) Antarctica
+C) Australia
+D) South America
+C
+
+--QUESTION--
+MEDIUM
+Which planet is known as the Gas Giant?
+A) Mars
+B) Venus
+C) Jupiter
+D) Mercury
+C
+
+--QUESTION--
+MEDIUM
+What is the primary ingredient in a Caesar salad dressing?
+A) Olive oil
+B) Lemon juice
+C) Anchovies
+D) Vinegar
+C
+
+--QUESTION--
+MEDIUM
+What is the study of fossils called?
+A) Biology
+B) Geology
+C) Anthropology
+D) Paleontology
+D
+
+--QUESTION--
+MEDIUM
+Who was the first woman in space?
+A) Valentina Tereshkova
+B) Sally Ride
+C) Mae Jemison
+D) Svetlana Savitskaya
+A
+
+--QUESTION--
+HARD
+What is the chemical symbol for potassium?
+A) P
+B) Pt
+C) Po
+D) K
+D
+
+--QUESTION--
+HARD
+Which Roman emperor built a massive wall across Northern Britain?
+A) Nero
+B) Julius Caesar
+C) Hadrian
+D) Augustus
+C
+
+--QUESTION--
+HARD
+In what year did the Chernobyl disaster occur?
+A) 1979
+B) 1982
+C) 1986
+D) 1990
+C
+
+--QUESTION--
+HARD
+What is the largest species of shark?
+A) Great White Shark
+B) Hammerhead Shark
+C) Whale Shark
+D) Tiger Shark
+C
+
+--QUESTION--
+HARD
+Which organ in the human body produces insulin?
+A) Liver
+B) Heart
+C) Pancreas
+D) Kidney
+C
+
+--QUESTION--
+HARD
+Who was the first person to reach the summit of Mount Everest?
+A) George Mallory
+B) Edmund Hillary
+C) Reinhold Messner
+D) Tenzing Norgay
+B
+
+--QUESTION--
+HARD
+What is the most common element in the Earth's crust?
+A) Iron
+B) Oxygen
+C) Silicon
+D) Aluminum
+B
+
+--QUESTION--
+HARD
+Which ancient civilization built Machu Picchu?
+A) Aztec
+B) Maya
+C) Inca
+D) Olmec
+C
+
+--QUESTION--
+HARD
+What is the SI unit of force?
+A) Joule
+B) Watt
+C) Newton
+D) Pascal
+C
+
+--QUESTION--
+HARD
+Who invented the World Wide Web?
+A) Bill Gates
+B) Tim Berners-Lee
+C) Steve Jobs
+D) Elon Musk
+B
+
+--QUESTION--
+EASY
+What do bees produce?
+A) Milk
+B) Wax
+C) Honey
+D) Silk
+C
+
+--QUESTION--
+EASY
+Which planet is known as the Blue Planet?
+A) Venus
+B) Mars
+C) Neptune
+D) Earth
+D
+
+--QUESTION--
+EASY
+Which animal is known as man's best friend?
+A) Cat
+B) Dog
+C) Fish
+D) Parrot
+B
+
+--QUESTION--
+EASY
+Which month has an extra day in a leap year?
+A) January
+B) February
+C) March
+D) April
+B
+
+--QUESTION--
+EASY
+What is the currency of the United Kingdom?
+A) Dollar
+B) Pound
+C) Euro
+D) Yen
+B
+
+--QUESTION--
+EASY
+How many sides does a pentagon have?
+A) 4
+B) 5
+C) 6
+D) 7
+B
+
+--QUESTION--
+MEDIUM
+Which planet is known for its Great Red Spot?
+A) Jupiter
+B) Saturn
+C) Uranus
+D) Neptune
+A
+
+--QUESTION--
+MEDIUM
+What is the rarest blood type?
+A) A
+B) B
+C) AB negative
+D) O positive
+C
+
+--QUESTION--
+MEDIUM
+What is the main ingredient in miso soup?
+A) Tofu
+B) Miso paste
+C) Seaweed
+D) Fish
+B
+
+--QUESTION--
+MEDIUM
+Which sea creature has three hearts?
+A) Whale
+B) Octopus
+C) Shark
+D) Dolphin
+B
+
+--QUESTION--
+MEDIUM
+What is the capital city of Egypt?
+A) Cairo
+B) Alexandria
+C) Luxor
+D) Giza
+A
+
+--QUESTION--
+MEDIUM
+Which mountain range separates Europe and Asia?
+A) Andes
+B) Himalayas
+C) Alps
+D) Ural Mountains
+D
+
+--QUESTION--
+HARD
+In what year did the French Revolution begin?
+A) 1776
+B) 1789
+C) 1804
+D) 1815
+B
+
+--QUESTION--
+HARD
+What is the main gas found in the Earth's atmosphere?
+A) Carbon Dioxide
+B) Oxygen
+C) Nitrogen
+D) Helium
+C
+
+--QUESTION--
+HARD
+Which country is known for inventing gunpowder?
+A) India
+B) Greece
+C) China
+D) Egypt
+C
+
+--QUESTION--
+HARD
+Who is known as the father of geometry?
+A) Pythagoras
+B) Euclid
+C) Archimedes
+D) Socrates
+B
+
+--QUESTION--
+HARD
+What is the oldest active volcano on Earth?
+A) Mauna Loa
+B) Mount Etna
+C) Mount St. Helens
+D) Krakatoa
+B
+
+--QUESTION--
+HARD
+Who was the first person to circumnavigate the globe?
+A) Christopher Columbus
+B) Vasco da Gama
+C) Ferdinand Magellan
+D) Marco Polo
+C
