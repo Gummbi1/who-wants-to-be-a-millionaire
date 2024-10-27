@@ -33,7 +33,9 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         // Holder for the next question to be asked
         Question question = new Question();
         
+        // Memory for button disabling logic
         String playerResponse = "";
+        String availableAnswers = "ABCD";
     
     public GUI() {
         initComponents();
@@ -451,6 +453,10 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         state = new GameState();
         playerResponse = "";
         
+        lifelineCallAFriend = new CallAFriend();
+        lifelineAskTheAudience = new AskTheAudience();
+        lifelineFiftyFifty = new FiftyFifty();
+        
         EnableOptions(true);
         GenerateQuestionPool();
         ReadIntro();
@@ -472,10 +478,22 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     // Set enabled for answer buttons
     public void EnableAnswerButtons(boolean en)
     {
-        answerA.setEnabled(en);
-        answerB.setEnabled(en);
-        answerC.setEnabled(en);
-        answerD.setEnabled(en);
+        if (availableAnswers.contains("A") || !en)
+        {
+            answerA.setEnabled(en);
+        }
+        if (availableAnswers.contains("B") || !en)
+        {
+            answerB.setEnabled(en);
+        }
+        if (availableAnswers.contains("C") || !en)
+        {
+            answerC.setEnabled(en);
+        }
+        if (availableAnswers.contains("D") || !en)
+        {
+            answerD.setEnabled(en);
+        }
     }
     
     // Set enabled for lifeline and walk away buttons
@@ -547,6 +565,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         answerD.setText(question.getAnswerD());
         
         // Make answer buttons clickable
+        availableAnswers = "ABCD";
         EnableAnswerButtons(true);
         EnableFinalAnswerButtons(false);
     }
@@ -594,7 +613,28 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     @Override
     // Use a lifeline for the current question
     public void UseLifeline5050() {
-        regisTextField.setText(lifelineFiftyFifty.UseLifeline(question));
+        String lifelineResponse = lifelineFiftyFifty.UseLifeline(question);
+        availableAnswers = "";
+        EnableAnswerButtons(false);
+        if (lifelineResponse.contains("A"))
+        {
+            availableAnswers += "A";
+        }
+        if (lifelineResponse.contains("B"))
+        {
+            availableAnswers += "B";
+        }
+        if (lifelineResponse.contains("C"))
+        {
+            availableAnswers += "C";
+        }
+        if (lifelineResponse.contains("D"))
+        {
+            availableAnswers += "D";
+        }
+        
+        EnableAnswerButtons(true);
+        regisTextField.setText(lifelineResponse);
         life5050.setEnabled(false);
     }
 
