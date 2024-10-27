@@ -14,7 +14,17 @@ public class Regis {
     private String[] nos;
 
     //Take question object and add flair 
-    public String readQuestion(int questionNum, int nextWinnings, Question question) {
+    public String readQuestion( Question question) {
+
+        
+        String fullQuestion;
+        fullQuestion = question.getQuestionText();
+
+        return fullQuestion;
+    }
+    
+    public String readFlair(int questionNum, int nextWinnings){
+        
         int select = 0;
 
         //Select first flair message on the first question, otherwise select random other flair message
@@ -26,12 +36,10 @@ public class Regis {
         {
             select = rand.nextInt(flairs.length - 1) + 1;
         }
+        String fullFlair = flairs[select] + nextWinnings + " dollars! \n\n";
         
-        String fullQuestion;
-        fullQuestion = flairs[select] + nextWinnings + " dollars! \n\n"
-                + question.getQuestionText();
-
-        return fullQuestion;
+        return fullFlair;
+              
     }
 
     public String readOptions(boolean lifeFriend, boolean life5050, boolean lifeAsk, int currentWinnings) {
@@ -60,9 +68,11 @@ public class Regis {
     }
 
     //intro
-    public String readIntro() {
+    public String readIntro(int questionNum, int nextWinnings) {
+        String fullIntro;
         int select = rand.nextInt(intros.length);
-        return intros[select];
+        fullIntro = intros[select] + "\n\n"+readFlair(questionNum,nextWinnings);
+        return fullIntro;
     }
 
     //outro
@@ -74,7 +84,7 @@ public class Regis {
     }
   
 
-    public String readCorrect(int currentWinnings, int bankedWinnings) {
+    public String readCorrect(int currentWinnings, int bankedWinnings, int questionNum, int nextWinnings) {
 
         int select = rand.nextInt(corrects.length);
         String fullCorrect;
@@ -83,6 +93,8 @@ public class Regis {
         } else {
             fullCorrect = corrects[select] + "$" + currentWinnings;
         }
+        fullCorrect+="\n\n"+readFlair(questionNum,nextWinnings);
+        
         return fullCorrect;
     }
 

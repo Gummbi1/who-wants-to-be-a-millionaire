@@ -17,7 +17,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     // Record the state of the game, and create handlers for console and file interaction
         GameState state = new GameState();
         FileOperations fileOps = new FileOperations();
-        ConsoleIO consoleIO = new ConsoleIO();
+
         
         // Generate a handler for the questions
         QuestionHandler qList = new QuestionHandler(fileOps.ParseQuestionsFromFile("Questions.txt"));
@@ -501,7 +501,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     @Override
     // Output an intro from Regis to the chosen output
     public void ReadIntro() {
-        regisTextField.setText(regis.readIntro());
+        regisTextField.setText(regis.readIntro(state.getQuestionNum(), state.getNextWinnings()));
     }
 
     @Override
@@ -530,7 +530,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
             EnableAnswerButtons(false);
             EnableFinalAnswerButtons(false);
             
-            ExportGameLog();
+    
         }
     }
 
@@ -538,7 +538,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
     // Ask the player the next question
     public void AskQuestion() {
         question = qList.GetNextQuestion(state.getQuestionNum());
-        questionTextField.setText(regis.readQuestion(state.getQuestionNum(), state.getNextWinnings(), question));
+        questionTextField.setText(regis.readQuestion(question));
         
         // Write answers to buttons
         answerA.setText(question.getAnswerA());
@@ -558,7 +558,7 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         {
             // Advance to next question if answer is correct
             state.incrementQuestion();
-            regisTextField.setText(regis.readCorrect(state.getCurrentWinnings(), state.getBankedWinnings()));
+            regisTextField.setText(regis.readCorrect(state.getCurrentWinnings(), state.getBankedWinnings(),state.getQuestionNum(),state.getNextWinnings()));
         }
         else
         {
@@ -612,9 +612,4 @@ public class GUI extends javax.swing.JFrame implements GameLogic {
         regisTextField.setText(regis.readOutro(state.getCurrentWinnings()));
     }
 
-    @Override
-    // Export a log of the last game to file
-    public void ExportGameLog() {
-        
-    }
 }
