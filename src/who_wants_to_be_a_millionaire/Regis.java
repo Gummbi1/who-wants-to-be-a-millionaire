@@ -36,7 +36,7 @@ public class Regis {
         {
             select = rand.nextInt(flairs.length - 1) + 1;
         }
-        String fullFlair = flairs[select] + nextWinnings + " dollars! \n\n";
+        String fullFlair = flairs[select] + " "+ nextWinnings + " dollars!";
         
         return fullFlair;
               
@@ -89,9 +89,9 @@ public class Regis {
         int select = rand.nextInt(corrects.length);
         String fullCorrect;
         if (currentWinnings == bankedWinnings) {
-            fullCorrect = corrects[select] + "\nThat's one of the checkpoints!" + currentWinnings + " dollars are in your bank!";
+            fullCorrect = "That's one of the checkpoints! " + currentWinnings + " dollars are in your bank!";
         } else {
-            fullCorrect = corrects[select] + "$" + currentWinnings;
+            fullCorrect = corrects[select] + " $" + currentWinnings;
         }
         fullCorrect+="\n\n"+readFlair(questionNum,nextWinnings);
         
