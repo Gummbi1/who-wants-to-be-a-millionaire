@@ -39,6 +39,4 @@ public interface GameLogic {
         // Output an outro and final winnings from Regis to the chosen output
         void ReadOutro();
         
-        // Export a log of the last game to file
-        void ExportGameLog();
 }
